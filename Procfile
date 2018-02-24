@@ -1,0 +1,1 @@
+worker: python boss_bot.py
