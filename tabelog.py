@@ -5,7 +5,6 @@ import random
 
 jinbo_url = "https://tabelog.com/tokyo/A1310/A131003/rstLst/"
 ocha_url  = "https://tabelog.com/tokyo/A1310/A131002/R2080/rstLst/"
-higashi_url = "https://tabelog.com/tokyo/A1304/A130401/R8219/rstLst/"
 list_usl  = "?SrtT=rt&Srt=D&sort_mode=1"
 
 def read_csv(f_name):
@@ -44,7 +43,5 @@ def get_shop_list(erea, food):
         tabelogu_url = make_url(data, jinbo_url, food)
     elif erea == "御茶ノ水":
         tabelogu_url = make_url(data, ocha_url, food)
-    elif erea == "東新宿":
-        tabelogu_url = make_url(data, higashi_url, food)
     rank_list = scrape_list(tabelogu_url)
     return rank_list[random.randint(0,4)]
